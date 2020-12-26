@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t mannydesigns/node . 
-  - docker images mannydesigns/node
+  - docker build -t engelbrod/node . 
+  - docker images engelbrod/node
 
 before_deploy:
   - docker login -u engelbrod -p 7622129rr
