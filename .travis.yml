@@ -5,3 +5,13 @@ services:
 script:
   - docker build -t mannydesigns/node .
   - docker images mannydesigns/node
+
+before_deploy:
+  - docker login -u engelbrod -p 7622129rr
+
+deploy:
+  provider: script
+  script: docker push mannydesigns/node
+  on:
+    branch: master
+
